@@ -11,7 +11,7 @@ app.post("/ai/chat", async (req, res) => {
     }
 
     try {
-        const output = await puter.ai.chat(input, {
+        const output = await puter.ai.chat(input, testMode = false, options = {
             model: "openai:openai/gpt-4o",
             testMode: true,
         });
